@@ -1,0 +1,19 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#post}}
+        {{> "content" width="narrow"}}
+    {{/post}}
+
+    <div class="case-study-return">
+        <a href="/casestudy" class="case-study-return-link">Return to all case studies</a>
+    </div>
+
+    {{#is "post"}}
+        {{#if @custom.show_related_posts}}
+            {{> "related-posts"}}
+        {{/if}}
+    {{/is}}
+
+</main> 

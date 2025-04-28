@@ -1,0 +1,103 @@
+/* Case Study Styles */
+
+.case-study {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.case-study-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.case-study-title h1 {
+    font-size: 3.6rem;
+    margin: 0;
+    color: var(--brand-color);
+}
+
+.case-study-feed {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4vmin;
+    margin: 0 auto;
+}
+
+.case-study-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+}
+
+.case-study-block .case-study-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.case-study-block .u-placeholder {
+    position: relative;
+    width: 100%;
+    padding-bottom: 10%; /* 2:1 aspect ratio */
+}
+
+.case-study-block .u-placeholder.horizontal {
+    padding-bottom: 10%; /* 2:1 aspect ratio */
+}
+
+.case-study-block .u-object-fit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-study-block .post-title {
+    margin: 2rem 2rem 1rem;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: var(--color-darkgrey);
+    transition: color 0.2s ease-in-out;
+}
+
+.case-study-block:hover .post-title {
+    color: var(--brand-color);
+}
+
+.case-study-block .post-excerpt {
+    margin: 0 2rem 2rem;
+    color: var(--color-secondary-text);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.case-study-return {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+a .case-study-return{
+    color: var(--brand-color);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .case-study-feed {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-study-title h1 {
+        font-size: 2.8rem;
+    }
+    
+    .case-study-block .post-title {
+        font-size: 1.8rem;
+    }
+}

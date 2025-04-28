@@ -1,0 +1,41 @@
+{{!< default}}
+
+<title>Case Studies</title>
+
+<main class="site-main">
+    <div class="post-feed gh-feed gh-outer">
+        <div class="case-study">
+            <header class="single-header gh-canvas">
+                <div class="single-title"><h1>Case Studies</h1></div>
+            </header>
+
+            <div class="case-study-feed">
+                {{#foreach posts}}
+                        <article class="{{post_class}}">
+                            <div class="case-study-block">
+                                <a href="{{url}}" class="case-study-link" aria-label="{{title}}">
+                                    <div class="u-placeholder horizontal">
+                                        {{#if feature_image}}
+                                            <img
+                                            class="u-object-fit"
+                                            srcset="{{> srcset}}"
+                                            sizes="(min-width: 992px) calc((92vw - 60px) / 3), (min-width: 768px) calc((92vw - 30px) / 2), 92vw"
+                                            src="{{img_url feature_image size="m"}}"
+                                            alt="{{title}}"
+                                        >
+                                        {{/if}}
+                                    </div>
+                                    <h3 class="post-title">{{title}}</h3>
+                                    <div class="post-excerpt">{{excerpt}}</div>
+                                </a>
+                            </div>
+                        </article>
+                {{/foreach}}
+            </div>
+
+            {{pagination}}
+
+        </div>
+    </div>
+
+</main>

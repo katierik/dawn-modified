@@ -1,0 +1,12 @@
+.gh-head-logo {
+    font-weight: 800;
+    /* Customized font & size for header */
+    font-family: "Birthstone", serif;
+    font-size: 5.5rem;
+}
+
+.gh-head-menu,
+.gh-head-actions {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
